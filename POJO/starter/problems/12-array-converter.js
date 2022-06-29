@@ -13,6 +13,12 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 
 function arrayConverter(array) {
   // your code here
+  let result = array.reduce(function (count, ele) {
+    if (ele in count) count[ele]++;
+    else count[ele] = 1;
+    return count;
+  }, {})
+  return result;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

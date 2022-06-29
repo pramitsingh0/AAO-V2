@@ -13,6 +13,13 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 
 function stringConverter(string) {
   // your code here
+  let charList = string.split('');
+  let result = charList.reduce(function(charObj, char) {
+    if (char in charObj) charObj[char]++;
+    else charObj[char] = 1;
+    return charObj;
+  }, {});
+  return result;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
