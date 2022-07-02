@@ -18,9 +18,16 @@ mapMutator(arr2, function (el, i) {
 console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
 
-let mapMutator = function() {
-
+let mapMutator = function(arr, cb) {
+  arr.forEach(function(ele, i) {
+    arr[i] = cb(ele, i);
+  });
 };
+let arr2 = [8, 9, 10];
+mapMutator(arr2, function (el, i) {
+    return el * i;
+});
+console.log(arr2); // [ 0, 9, 20 ]
 
 
 
