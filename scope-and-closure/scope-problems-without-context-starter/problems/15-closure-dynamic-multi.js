@@ -19,8 +19,12 @@ multiplyByFive(5); // returns 25
 ***********************************************************************/
 
 // your code here!
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+let dynamicMultiply = (num1) => {
+  return function(num2) {
+    return num1 * num2;
+  }
+}
 
 try {
   module.exports = dynamicMultiply;

@@ -29,7 +29,15 @@ Example 4:
 ***********************************************************************/
 
 // your code here
-
+let countDownTimer = (n) => {
+  let count = 0;
+  if (n === 0) return "Happy New Year!";
+  return function wishes() {
+    count++;
+    if (count >= n) return "Happy New Year!";
+    else return wishes;
+  }
+} 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

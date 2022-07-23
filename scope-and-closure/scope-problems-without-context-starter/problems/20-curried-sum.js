@@ -43,6 +43,17 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 // your code here
+let curriedSum = n => {
+  let count = 0;
+  let sum = 0;
+  
+  return function sumTimes(num) {
+    count++;
+    if (count <= n) sum += num;
+    if (count === n) return sum;
+    else return sumTimes;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -23,6 +23,16 @@ console.log(smoothie2("pineapple"));
 ***********************************************************************/
 
 // your code here
+let smoothieMachine = (...items) => {
+  let result = "I'm having a smoothie with " + items.join(" and ");
+  return function addFruits(...fruits) {
+    if (!result.endsWith("with ")) result += " and "
+    result += fruits.join(" and ");
+    return result;
+  }
+}
+let smoothie2 = smoothieMachine("milk");
+console.log(smoothie2("kale", "spinach"));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

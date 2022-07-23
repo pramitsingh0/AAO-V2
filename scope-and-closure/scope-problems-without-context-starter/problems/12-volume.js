@@ -25,7 +25,17 @@ console.log(table2(75)); // STILL prints 6
 ***********************************************************************/
 
 // your code here
-
+let recVolume = height => {
+  let count = 0;
+  let result = height;
+  return function(num) {
+    count++;
+    if (count > 2) num = 1;
+    result *= num;
+    if (count < 2) return () => undefined;
+    else return result;
+  }
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

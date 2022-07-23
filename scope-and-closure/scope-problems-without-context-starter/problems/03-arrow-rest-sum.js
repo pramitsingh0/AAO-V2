@@ -11,6 +11,10 @@ arrowRestSum(0); // => 0
 ***********************************************************************/
 
 // your code here!
+let arrowRestSum = (...arr) => {
+  let sum = arr.reduce((sum, currEle) => sum + currEle);
+  return sum;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
